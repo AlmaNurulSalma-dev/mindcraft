@@ -17,3 +17,14 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+*.sqlite
+*.sqlite-journal
+.DS_Store
+.log
+
+# Additional
+/storage/debugbar
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
