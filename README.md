@@ -81,52 +81,12 @@ MINDCRAFT-EXPO is a revolutionary educational platform that leverages artificial
 ### Prerequisites
 - PHP >= 8.2
 - Composer
-- MySQL/MariaDB
+- MySQL
 - Node.js & NPM
 
-### Setup Steps
+## 🏗️ Architecture
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/AlmaNurulSalma-dev/mindcraft.git
-cd mindcraft
-
-Install dependencies
-
-bashcomposer install
-npm install
-
-Environment setup
-
-bashcp .env.example .env
-php artisan key:generate
-
-Configure database in .env file
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=mindcraft_expo
-DB_USERNAME=root
-DB_PASSWORD=
-
-Run migrations and seeders
-
-bashphp artisan migrate --seed
-
-Compile assets
-
-bashnpm run build
-
-Start the development server
-
-bashphp artisan serve
-Visit http://127.0.0.1:8000 to access the application.
-🔑 Demo Accounts
-After running seeders, you can log in with the following demo accounts:
-RoleEmailPasswordAdminadmin@mindcraft.compasswordMentormentor@mindcraft.compasswordStudentstudent@mindcraft.compassword
-🏗️ Architecture
-MINDCRAFT-EXPO follows a multi-panel architecture with role-based access control:
+### MINDCRAFT-EXPO follows a multi-panel architecture with role-based access control:
 MINDCRAFT-EXPO
 │
 ├── Admin Panel (/admin)
@@ -146,16 +106,4 @@ MINDCRAFT-EXPO
     ├── Learning Dashboard
     ├── Assignment Submission
     └── Mentor Communication
-Data Structure
 
-Category → Course → Unit → Lesson
-User → StudentProfile / Mentor
-LearningPath → LearningPathItem
-AI Components: LlmModel, PromptTemplate, AiGeneratedContent
-
-📱 Screenshots
-<div align="center">
-  <img src="https://via.placeholder.com/250x150.png?text=Admin+Dashboard" width="250">
-  <img src="https://via.placeholder.com/250x150.png?text=Mentor+Panel" width="250">
-  <img src="https://via.placeholder.com/250x150.png?text=Student+Dashboard" width="250">
-</div>
