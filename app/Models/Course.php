@@ -16,10 +16,17 @@ class Course extends Model
     protected $fillable = [
         'name',
         'category_id',
+        'mentor_id',
         'price',
         'image',
         'description',
-        'slug'
+        'slug',
+        'is_active'
+    ];
+    
+    protected $casts = [
+        'is_active' => 'boolean',
+        'price' => 'integer',
     ];
     
     public function setNameAttribute($value)
@@ -33,11 +40,18 @@ class Course extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
     
+    public function mentor(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'mentor_id');
+    }
+    
+    // Relasi lainnya
     public function units(): HasMany
     {
         return $this->hasMany(Unit::class);
     }
     
+    // Relasi lainnya tetap sama
     public function registrations(): HasMany
     {
         return $this->hasMany(Registration::class);
