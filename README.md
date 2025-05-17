@@ -91,18 +91,18 @@ MINDCRAFT-EXPO is a revolutionary educational platform that leverages artificial
 git clone https://github.com/AlmaNurulSalma-dev/mindcraft.git
 cd mindcraft
 
-2. **Install dependencies**
-```bash
-composer install
+Install dependencies
+
+bashcomposer install
 npm install
 
-3. **Environment setup**
-```bash
-cp .env.example .env
+Environment setup
+
+bashcp .env.example .env
 php artisan key:generate
 
-4. **Configure database in .env file**
-```bash
+Configure database in .env file
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -110,14 +110,52 @@ DB_DATABASE=mindcraft_expo
 DB_USERNAME=root
 DB_PASSWORD=
 
-5. **Run migrations and seeders**
-```bash
-php artisan migrate --seed
+Run migrations and seeders
 
-6. **Compile assets**
-```bash
-npm run build
+bashphp artisan migrate --seed
 
-3. **Start the development server**
-```bash
-php artisan serve
+Compile assets
+
+bashnpm run build
+
+Start the development server
+
+bashphp artisan serve
+Visit http://127.0.0.1:8000 to access the application.
+🔑 Demo Accounts
+After running seeders, you can log in with the following demo accounts:
+RoleEmailPasswordAdminadmin@mindcraft.compasswordMentormentor@mindcraft.compasswordStudentstudent@mindcraft.compassword
+🏗️ Architecture
+MINDCRAFT-EXPO follows a multi-panel architecture with role-based access control:
+MINDCRAFT-EXPO
+│
+├── Admin Panel (/admin)
+│   ├── User Management
+│   ├── Course & Category Management
+│   ├── AI Model Configuration
+│   └── System Settings
+│
+├── Mentor Panel (/mentor)
+│   ├── Course Management
+│   ├── Student Progress Tracking
+│   ├── Assignment Grading
+│   └── Insight Reports
+│
+└── Mentee Panel (/mentee)
+    ├── Course Enrollment
+    ├── Learning Dashboard
+    ├── Assignment Submission
+    └── Mentor Communication
+Data Structure
+
+Category → Course → Unit → Lesson
+User → StudentProfile / Mentor
+LearningPath → LearningPathItem
+AI Components: LlmModel, PromptTemplate, AiGeneratedContent
+
+📱 Screenshots
+<div align="center">
+  <img src="https://via.placeholder.com/250x150.png?text=Admin+Dashboard" width="250">
+  <img src="https://via.placeholder.com/250x150.png?text=Mentor+Panel" width="250">
+  <img src="https://via.placeholder.com/250x150.png?text=Student+Dashboard" width="250">
+</div>
