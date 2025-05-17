@@ -70,12 +70,8 @@ MINDCRAFT-EXPO is a revolutionary educational platform that leverages artificial
       <br>Filament 3.3
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" width="48" height="48" alt="MySQL" />
+      <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" width="48" height="48" alt="MySQL" />
       <br>MySQL
-    </td>
-    <td align="center" width="96">
-      <img src="https://livewire-framework.com/img/twitter.png" width="48" height="48" alt="Livewire" />
-      <br>Livewire
     </td>
   </tr>
 </table>
